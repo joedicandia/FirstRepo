@@ -1,6 +1,9 @@
 #!/bin/bash
 
-motifs=cat /dev/stdin
-echo 'ATTTTGCA: '
-grep -o "ATTTTTGCA" $motifs | wc -l
+while read motif
+do
+echo $motif
+grep -o "$motif" "$2" | wc -l
+done < "$1"
+
 
