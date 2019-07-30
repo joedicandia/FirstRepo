@@ -5,4 +5,4 @@ do
 echo $motif
 trimmedmotif="$(echo $motif | tr -d [:space:])"
 grep -o $trimmedmotif $2 | wc -l
-done < "$1"
+done < "$1" > motif_count.txt
